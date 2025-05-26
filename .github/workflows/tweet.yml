@@ -27,4 +27,6 @@ jobs:
           API_SECRET: ${{ secrets.API_SECRET }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: python path/to/your/bot.py  # ← 正しいパスに直す
+       - name: Run bot script
+          run: python bot.py
+
