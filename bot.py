@@ -12,6 +12,7 @@ def main():
     )
     api = tweepy.API(auth)
     api.update_status("こんにちは、ひらがなボットです。")
+print("ひらがなボットが動きました！")
 
 if __name__ == "__main__":
     main()
