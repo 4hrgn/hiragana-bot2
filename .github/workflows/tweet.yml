@@ -3,7 +3,7 @@ name: Hiragana Tweet Bot
 on:
   schedule:
     - cron: '0 9 * * *'  # 毎日 9:00（UTC）に実行（日本時間18:00）
-  workflow_dispatch:      # 手動実行もOK
+  workflow_dispatch:      # 手動でも実行できる
 
 jobs:
   tweet:
@@ -23,8 +23,8 @@ jobs:
 
       - name: Run bot script
         env:
-          API_KEY: ${{ tGvzTQUEKswuVCkJn5zKoudc2 }}
-          API_SECRET: ${{ SM1K571d8KwiCyWECPsSVPtbsIweENldvCrnF7mGJmFEIpGPYS }}
-          ACCESS_TOKEN: ${{ 1899010131423289344-DNuhEryB4ulVUDEnhbjKfrknAesykk }}
-          ACCESS_TOKEN_SECRET: ${{ v9pwyqDzHamtYHOVesYoQW9yso3j7GtuvOl9hCCtREijp }}
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SECRET: ${{ secrets.API_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: python bot.py
